@@ -1,0 +1,71 @@
+.feature {
+    background-color: $lightGrayishBlue;
+    text-align: center;
+
+    @include breakpoint-up(medium){
+        text-align: left;
+    }
+
+    &__intro{
+        margin-top: 2.275rem;
+
+        @include breakpoint-up(large){
+            width: 60%;
+            margin-bottom: 3.75rem;
+        }
+    }
+
+    &__grid {
+        @include breakpoint-up(medium){
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        
+    }
+    
+
+    &__item {
+        padding: 0.9375rem;
+        transition: 150ms ease-in-out;
+
+        @include breakpoint-up(medium){
+            flex: 1 0 50%;
+
+        }
+        @include breakpoint-up(large){
+            flex: 1;
+        }
+
+        &:hover{
+            transform: scale(1.05);
+        }
+    
+    }
+
+    &__icon {
+        margin-bottom: 1.875rem;
+        @include breakpoint-up(large){
+            margin-bottom: 1.725rem;
+
+        }
+        
+ 
+    }
+
+    &__title{
+        font-weight: 300;
+        line-height: 1.15;
+        color: $darkBlue;
+        margin-top: 0px;
+        margin-bottom: 1.725rem;
+ 
+    }
+
+    &__descreption{
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 2.275rem;
+       
+    }
+}
